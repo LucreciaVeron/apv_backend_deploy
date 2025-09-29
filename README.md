@@ -27,12 +27,18 @@ GET     /api/usuarios/confirmar/:token → Confirmar cuenta
 POST    /api/usuarios/login   → Autenticar usuario  
 POST    /api/usuarios/olvide-password → Solicitar recuperación  
 GET     /api/usuarios/olvide-password/:token → Comprobar token  
-POST    /api/usuarios/olvide-password/:token → Guardar nueva contraseña  
+POST    /api/usuarios/olvide-password/:token → Guardar nueva contraseña
+```
 
+### Área privada (requiere JWT)
+```js
 GET     /api/usuarios/perfil           → Obtener perfil  
 PUT     /api/usuarios/perfil/:id       → Actualizar perfil  
 PUT     /api/usuarios/actualizar-password → Cambiar contraseña  
+```
 
+### Pacientes (requiere JWT)
+```js
 POST    /api/pacientes      → Agregar paciente  
 GET     /api/pacientes      → Listar pacientes  
 GET     /api/pacientes/:id  → Obtener paciente por ID  
